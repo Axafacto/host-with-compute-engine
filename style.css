@@ -1,0 +1,106 @@
+/* Menyembunyikan scrollbar di seluruh halaman */
+html, body {
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    
+}
+
+/* Background */
+.banner img {
+    width: 100%; /* Membuat gambar memenuhi lebar kontainer */
+    height: 400px; /* Menjaga proporsi gambar */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Menempatkan background di bawah konten lainnya */
+}
+
+/* Profile */
+.profile {
+    position: relative;
+    z-index: 2; /* Menempatkan profil di atas background */
+    text-align: center;
+    top: 50px; /* Menyesuaikan posisi foto profil jika diperlukan */
+}
+
+.profile img {
+    border-radius: 50%; /* Jika ingin membuat foto profil berbentuk lingkaran */
+    width: 150px; /* Atur ukuran foto profil */
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Memberi jarak antara foto dan teks */
+}
+
+.profile h1, p {
+    color: white; /* Agar teks terlihat jelas di atas background */
+    font-family: "Montserrat", serif;;
+}
+
+main {
+    margin-top: 120px; /* Memberikan jarak yang sesuai dengan tinggi banner */
+    padding: 0 200px 0 200px;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.left, .right {
+    width: 45%;
+}
+
+.left h2, .right h2 {
+    color: #333;
+}
+
+.left p {
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd; /* Garis batas di bawah setiap item */
+}
+
+li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+
+footer {
+    background-color: #bbbbbb; /* Warna latar belakang footer */
+    padding: 20px 0;
+    text-align: center;
+    height: 100px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Jarak antar gambar */
+}
+
+.gallery img {
+    width: 40px; /* Ukuran gambar ikon */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    filter: brightness(100%) invert(100%);
+}
